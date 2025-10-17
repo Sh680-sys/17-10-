@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36518.9 d17.14
+VisualStudioVersion = 17.14.36518.9
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KSHOP.PL", "KSHOP.PL\KSHOP.PL.csproj", "{A7639188-AA17-4CB2-985A-86ACBF19087F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KSHOP1.PL", "KSHOP.PL\KSHOP1.PL.csproj", "{A7639188-AA17-4CB2-985A-86ACBF19087F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KSHOP1.DAL", "KSHOP1.DAL\KSHOP1.DAL.csproj", "{7D778309-5779-4573-B8D4-6E53747A9E1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KSHOP1.BLL", "KSHOP1.BLL\KSHOP1.BLL.csproj", "{0BFFA502-73E2-4930-A07B-8FB3E07358E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{A7639188-AA17-4CB2-985A-86ACBF19087F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7639188-AA17-4CB2-985A-86ACBF19087F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7639188-AA17-4CB2-985A-86ACBF19087F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D778309-5779-4573-B8D4-6E53747A9E1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D778309-5779-4573-B8D4-6E53747A9E1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D778309-5779-4573-B8D4-6E53747A9E1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D778309-5779-4573-B8D4-6E53747A9E1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BFFA502-73E2-4930-A07B-8FB3E07358E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BFFA502-73E2-4930-A07B-8FB3E07358E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BFFA502-73E2-4930-A07B-8FB3E07358E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BFFA502-73E2-4930-A07B-8FB3E07358E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

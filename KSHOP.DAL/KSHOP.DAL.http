@@ -1,0 +1,6 @@
+@KSHOP.DAL_HostAddress = http://localhost:5220
+
+GET {{KSHOP.DAL_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
