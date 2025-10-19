@@ -6,7 +6,6 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="DocuSign.eSign" Version="6.0.0" />
 		<PackageReference Include="Mapster" Version="7.4.0" />
 	</ItemGroup>
 
@@ -14,3 +13,4 @@
 		<ProjectReference Include="..\KSHOP1.DAL\KSHOP1.DAL.csproj" />
 	</ItemGroup>
 </Project>
+

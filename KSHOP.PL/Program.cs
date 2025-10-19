@@ -4,14 +4,15 @@ using KSHOP1.BLL.Services.Interfaces;
 using KSHOP1.DAL.Data;
 using KSHOP1.DAL.Repositories.Classes;
 using KSHOP1.DAL.Repositories.Interfaces;
+using KSHOP1.DAL.Utils;
 using Microsoft.EntityFrameworkCore;
-using Scalar;
 using Scalar.AspNetCore;
 
 namespace KSHOP.PL;
 
 public class Program
 {
+
     public static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
@@ -33,7 +34,7 @@ public class Program
 
         builder.Services.AddScoped<IBrandRepository, BrandRepository>();
         builder.Services.AddScoped<IBrandService, BrandService>();
-
+        builder.Services.AddScoped<ISeedData, SeedData>();
 
         var app = builder.Build();
 
@@ -43,6 +44,13 @@ public class Program
             app.MapOpenApi();
             app.MapScalarApiReference();
         }
+
+        var scope = app.Services.CreateScope();
+        var objectOfSeedData = scope.ServiceProvider.GetRequiredService<ISeedData>();
+        objectOfSeedData.DataSeeding();
+
+
+
 
         app.UseHttpsRedirection();
         app.UseAuthorization();

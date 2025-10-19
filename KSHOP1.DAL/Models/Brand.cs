@@ -8,6 +8,8 @@ namespace KSHOP1.DAL.Models
 {
     public class Brand: BaseModel
     {
+        internal string Description;
+
         public string Name { get; set; }
 
 

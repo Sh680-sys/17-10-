@@ -1,4 +1,6 @@
 ﻿using KSHOP1.DAL.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -6,17 +8,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KSHOP1.DAL.Data
+namespace KSHOP1.DAL.Data;
+
+public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : IdentityDbContext<ApplicationUser>(options)
 {
-    public class ApplicationDbContext : DbContext
+    public DbSet<Category> Categories { get; set; }
+    public DbSet<Brand> Brands { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder builder)
     {
-        public DbSet<Category> Categories { get; set; }
-        public DbSet<Brand> Brands { get; set; }
+        base.OnModelCreating(builder);
+
+        builder.Entity<ApplicationUser>().ToTable("Users");
+        builder.Entity<IdentityRole>().ToTable("Roles");
+        builder.Entity<IdentityUserRole<string>>().ToTable("UsersRole");
 
 
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-            : base(options)
-        {
-        }
+
+        builder.Ignore<IdentityUserLogin<string>>();
+        builder.Ignore<IdentityUserClaim<string>>();
+        builder.Ignore<IdentityUserToken<string>>();
+        builder.Ignore<IdentityRoleClaim<string>>();
     }
+
 }
+
+    
+
