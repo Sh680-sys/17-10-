@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace KSHOP1.PL.Areas.Auth.Controllers
 {
     [Area("Auth")]
-    [Route("api/[area]/[controller]")]
+    [Route("api/auth")]
     [ApiController]
     public class AuthController : ControllerBase
     {
