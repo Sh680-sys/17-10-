@@ -11,5 +11,4 @@ public class Category :BaseModel
     internal string Description;
 
     public string Name { get; set; }
-    public bool IsActive { get; set; }
 }

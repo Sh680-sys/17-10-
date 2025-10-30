@@ -1,5 +1,4 @@
 ﻿using KSHOP1.BLL.Services.Clasess;
-using KSHOP1.BLL.Services.Clasess;
 using KSHOP1.BLL.Services.Interfaces;
 using KSHOP1.DAL.Data;
 using KSHOP1.DAL.Repositories.Classes;
