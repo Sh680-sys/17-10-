@@ -71,10 +71,6 @@ public class Program
         // Register JwtTokenService
         builder.Services.AddScoped<JwtTokenService>();
 
-        // Register ApplicationDbContext with SQL Server
-        builder.Services.AddDbContext<ApplicationDbContext>(options =>
-            options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
         // Register repositories and services
         builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
         builder.Services.AddScoped<ICategoryService, CategoryService>();
