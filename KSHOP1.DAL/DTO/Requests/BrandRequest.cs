@@ -8,7 +8,8 @@ namespace KSHOP1.DAL.DTO.Requests
 {
    public class BrandRequest
     {
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public string Description { get; set; } = string.Empty;
         public int Id { get; set; }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using KSHOP1.DAL.Data;
 using KSHOP1.DAL.Models;
+using KSHOP1.DAL.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -9,10 +10,10 @@ using System.Threading.Tasks;
 
 namespace KSHOP1.DAL.Repositories.Classes
 {
-    public class GeneicRepository <T> where T : BaseModel
+    public class GenericRepository<T> : IGenericRepository<T> where T : BaseModel
     {
         private readonly ApplicationDbContext dbContext;
-        public GeneicRepository (ApplicationDbContext context)
+        public GenericRepository(ApplicationDbContext context)
         {
             dbContext = context;
         }

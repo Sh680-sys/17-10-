@@ -13,40 +13,40 @@ namespace KSHOP1.BLL.Services.Clasess
 {
     public class GenericService<TRequest, TResponse, TEntity> : IGenericService<TRequest, TResponse, TEntity> where TEntity : BaseModel
     {
-        private readonly IGeneicRepository<TEntity> _geneicRepository;
+        private readonly IGenericRepository<TEntity> _genericRepository;
 
-        public GenericService(IGeneicRepository<TEntity> geneicRepository)
+        public GenericService(IGenericRepository<TEntity> genericRepository)
         {
-            _geneicRepository = geneicRepository;
+            _genericRepository = genericRepository;
         }
 
         public int Create(TRequest request)
         {
             var entity = request.Adapt<TEntity>();
 
-            return _geneicRepository.Add(entity);
+            return _genericRepository.Add(entity);
 
         }
 
         public int Delete(int id)
         {
-            var entity = _geneicRepository.GetById(id);
+            var entity = _genericRepository.GetById(id);
             if (entity == null)
             {
                 throw new Exception("Entity not found");
             }
-            return _geneicRepository.Remove(entity);
+            return _genericRepository.Remove(entity);
         }
 
         public IEnumerable<TResponse> GetAll()
         {
-            var entities = _geneicRepository.GetAll();
+            var entities = _genericRepository.GetAll();
             return entities.Adapt<IEnumerable<TResponse>>();
         }
 
         public TResponse? GetById(int id)
         {
-            var entity = _geneicRepository.GetById(id);
+            var entity = _genericRepository.GetById(id);
             if (entity == null)
             {
                 throw new Exception("Entity not found");
@@ -56,26 +56,26 @@ namespace KSHOP1.BLL.Services.Clasess
 
         public bool ToggleStatus(int id)
         {
-            var entity = _geneicRepository.GetById(id);
+            var entity = _genericRepository.GetById(id);
             if (entity == null)
             {
                 throw new Exception("Entity not found");
             }
             entity.IsActive = !entity.IsActive;
-            _geneicRepository.Update(entity);
+            _genericRepository.Update(entity);
             return entity.IsActive;
         }
 
         public int Update(int id, TRequest request)
         {
-            var entity = _geneicRepository.GetById(id);
+            var entity = _genericRepository.GetById(id);
             if (entity == null)
             {
                 throw new Exception("Entity not found");
             }
             var updatedEntity = request.Adapt<TEntity>();
             updatedEntity.Id = id;
-            return _geneicRepository.Update(updatedEntity);
+            return _genericRepository.Update(updatedEntity);
         }
     }
 }
