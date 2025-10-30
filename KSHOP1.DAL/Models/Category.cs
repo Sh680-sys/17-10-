@@ -8,8 +8,6 @@ namespace KSHOP1.DAL.Models;
 
 public class Category :BaseModel
 {
-    internal string Description;
-
-    public string Name { get; set; }
-    public bool IsActive { get; set; }
+    public string Description { get; set; } = string.Empty;
+    public string Name { get; set; } = string.Empty;
 }

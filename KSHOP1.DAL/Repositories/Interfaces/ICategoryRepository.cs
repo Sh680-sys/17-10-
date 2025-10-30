@@ -2,7 +2,7 @@
 
 namespace KSHOP1.DAL.Repositories.Interfaces
 {
-    public interface ICategoryRepository : IGeneicRepository<Category>
+    public interface ICategoryRepository : IGenericRepository<Category>
     {
        
     }

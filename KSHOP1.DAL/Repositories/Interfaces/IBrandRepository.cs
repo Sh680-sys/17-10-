@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace KSHOP1.DAL.Repositories.Interfaces
 {
-    public interface IBrandRepository: IGeneicRepository<Brand>
+    public interface IBrandRepository: IGenericRepository<Brand>
 
     {
     }

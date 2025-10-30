@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace KSHOP1.DAL.Repositories.Classes
 {
-    public class BrandRepository : GeneicRepository<Brand>, IBrandRepository
+    public class BrandRepository : GenericRepository<Brand>, IBrandRepository
     {
         public BrandRepository(ApplicationDbContext context) : base(context)
         {

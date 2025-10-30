@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace KSHOP1.DAL.Repositories.Classes
 {
-    public class GeneicRepository <T> where T : BaseModel
+    public class GenericRepository<T> where T : BaseModel
     {
         private readonly ApplicationDbContext dbContext;
-        public GeneicRepository (ApplicationDbContext context)
+        public GenericRepository(ApplicationDbContext context)
         {
             dbContext = context;
         }

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace KSHOP1.DAL.Repositories.Classes;
 
-public class CategoryRepository : GeneicRepository<Category>, ICategoryRepository
+public class CategoryRepository : GenericRepository<Category>, ICategoryRepository
 
 
 
